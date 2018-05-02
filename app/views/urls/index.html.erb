@@ -1,0 +1,8 @@
+<h1>URLS</h1>
+<% @urls.each do |url| %>
+<p>
+  <%= link_to url.by_id, url_path(:id => "#{url.by_id}") %> => <%= url.original %>
+</p>
+<% end %>
+
+<%= link_to "Another URL", new_url_path %>
